@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Education Form</title>
+    <!-- Add your CSS styling here if needed -->
+</head>
+<body>
+
+    <h2>Education Form</h2>
+
+    <form th:action="@{/applicants/addEducationDetails}" method="post">
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification" required/>
+
+        <label for="institute">Institute:</label>
+        <input type="text" id="institute" name="institute" required/>
+
+        <label for="passingYear">Passing Year:</label>
+        <input type="number" id="passingYear" name="passingYear" required/>
+
+        <button type="submit">Add Education Details</button>
+    </form>
+
+    <!-- Add your JavaScript for handling form submission or any other interactions -->
+
+</body>
+</html>

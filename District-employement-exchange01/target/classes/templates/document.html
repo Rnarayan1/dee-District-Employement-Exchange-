@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Document Upload Form</title>
+    <!-- Add your CSS styling here if needed -->
+</head>
+<body>
+
+    <h2>Document Upload Form</h2>
+
+    <form th:action="@{/applicants/addDocument}" method="post" enctype="multipart/form-data">
+        <label for="documentName">Document Name:</label>
+        <input type="text" id="documentName" name="documentName" required/>
+
+        <label for="documentContent">Document Content:</label>
+        <input type="file" id="documentContent" name="documentContent" accept=".pdf, .doc, .docx" required/>
+
+        <button type="submit">Upload Document</button>
+    </form>
+
+    <!-- Add your JavaScript for handling form submission or any other interactions -->
+
+</body>
+</html>

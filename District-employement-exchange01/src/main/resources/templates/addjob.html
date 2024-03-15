@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Job Page</title>
+</head>
+<body>
+
+    <h2>Add Job</h2>
+
+    <form th:action="@{/admin/add}" th:object="${job}" method="post">
+        <!-- jobTitle -->
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" th:field="*{jobTitle}" required/>
+
+        <!-- qualificationRequired -->
+        <label for="qualificationRequired">Qualification Required:</label>
+        <input type="text" id="qualificationRequired" name="qualificationRequired" th:field="*{qualificationRequired}" required/>
+
+        <!-- vacancyCount -->
+        <label for="vacancyCount">Vacancy Count:</label>
+        <input type="number" id="vacancyCount" name="vacancyCount" th:field="*{vacancyCount}" required/>
+
+        <!-- applicationStatus -->
+        <label for="applicationStatus">Application Status:</label>
+        <input type="text" id="applicationStatus" name="applicationStatus" th:field="*{applicationStatus}" required/>
+
+        <!-- lastDate -->
+        <label for="lastDate">Last Date:</label>
+        <input type="date" id="lastDate" name="lastDate" th:field="*{lastDate}" required/>
+
+        <button type="submit">Add Job</button>
+    </form>
+
+</body>
+</html>
